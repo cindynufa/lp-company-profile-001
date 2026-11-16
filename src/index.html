@@ -18,35 +18,53 @@
   </head>
   <body>
     <!-- Header -->
-    <header>
-      <a href="#home">
-        <img src="/assets/images/logo.png" alt="Logo" />
-        <h1 class="font-logo font-semibold">Your Logo</h1>
-      </a>
+    <header
+      class="sticky w-full top-0 z-50 border-b border-transparent before:absolute before:inset-0 before:bg-black/40 before:backdrop-blur-glass"
+    >
+      <div
+        class="relative flex w-full max-w-(--container-content) h-16 px-4 py-6 mx-auto z-10 items-center justify-between lg:grid lg:grid-cols-[1fr_auto_1fr] lg:h-full lg:px-35"
+      >
+        <a href="#home" class="flex gap-[0.533rem] items-center">
+          <img
+            src="/assets/images/logo.png"
+            alt="Logo"
+            class="logo-image"
+          />
+          <h1 class="logo-text">Your Logo</h1>
+        </a>
 
-      <button>
-        <img
-          src="/assets/icons/dark-hamburger-open.png"
-          alt="Open Navigation Menu"
-        />
-        <img
-          src="/assets/icons/dark-hamburger-close.png"
-          alt="Close Navigation Menu"
-        />
-      </button>
+        <div class="relative lg:hidden">
+          <input type="checkbox" id="menu-toggle" class="peer sr-only" />
+          <label for="menu-toggle" class="flex items-center cursor-pointer">
+            <img
+              src="/assets/icons/dark-hamburger-open.png"
+              alt="Open Navigation Menu"
+              class="icon-open block"
+            />
+            <img
+              src="/assets/icons/dark-hamburger-close.png"
+              alt="Close Navigation Menu"
+              class="icon-close hidden"
+            />
+          </label>
+        </div>
 
-      <nav>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#service">Service</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#testimonials">Testimonials</a></li>
-          <li><a href="#faq">FAQ</a></li>
-        </ul>
+        <nav class="nav" aria-label="Main Navigation">
+          <ul class="flex flex-col w-full gap-3 lg:flex-row lg:w-auto">
+            <li><a href="#about" class="nav-text">About</a></li>
+            <li><a href="#service" class="nav-text">Service</a></li>
+            <li><a href="#portfolio" class="nav-text">Portfolio</a></li>
+            <li><a href="#testimonials" class="nav-text">Testimonials</a></li>
+            <li><a href="#faq" class="nav-text">FAQ</a></li>
+          </ul>
 
-        <button>Let's Talk</button>
-      </nav>
+          <button class="button-primary shadow-inset lg:w-[12.313rem] lg:justify-self-end">
+            Let's Talk
+          </button>
+        </nav>
+      </div>
     </header>
+
     <main>
       <!-- Hero Section -->
       <section>

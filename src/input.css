@@ -2,8 +2,8 @@
 
 @theme {
   /* Font Family */
-  --font-primary: 'Quicksand', san-serif;
-  --font-logo: 'Outfit', san-serif;
+  --font-primary: 'Quicksand', sans-serif;
+  --font-logo: 'Outfit', sans-serif;
 
   /* Font Size */
   --text-xs: 0.75rem;
@@ -63,10 +63,73 @@
   --radius-3xl: 1.25rem; /* 20px */
   --radius-4xl: 1.5rem; /* 24px */
   --radius-full: 9999px;
+
+  /* Container */
+  --container-content: 1280px;
+
+  --blur-glass: 40px;
 }
 
+/* Base */
 @layer base {
   body {
     @apply bg-black font-primary text-white;
+  }
+}
+
+/* Components */
+@layer components {
+  .section-container {
+    @apply mx-auto w-full max-w-(--container-content);
+    @apply px-4 py-6;
+  }
+
+  .logo-image {
+    @apply w-[1.644rem] h-[1.803rem] lg:w-[1.849rem] lg:h-[2.029rem];
+  }
+
+  .logo-text {
+    @apply font-logo font-semibold text-[1.333rem] lg:text-2xl;
+  }
+
+  .nav {
+    @apply invisible absolute flex flex-col w-full left-0 top-full px-4 py-6 gap-3 opacity-0 translate-y-2 transition-all duration-300 lg:gap-8;
+    @apply lg:visible lg:contents;
+  }
+
+  .nav-text {
+    @apply font-semibold text-sm text-neutral-25 lg:text-md;
+  }
+
+  .button-primary {
+    @apply inline-flex h-11 p-2 gap-1 bg-primary-200 rounded-full font-bold text-sm text-white items-center justify-center cursor-pointer;
+  }
+}
+
+/* Utilities */
+@layer utilities {
+  header:has(#menu-toggle:checked)::after {
+    content: '';
+    @apply fixed inset-0 bg-black lg:hidden;
+  }
+
+  header:has(#menu-toggle:checked) nav {
+    @apply visible translate-y-0 opacity-100;
+  }
+
+  header:has(#menu-toggle:checked) .icon-open {
+    @apply hidden;
+  }
+
+  header:has(#menu-toggle:checked) .icon-close {
+    @apply block;
+  }
+
+  body:has(#menu-toggle:checked) {
+    @apply overflow-hidden lg:overflow-auto;
+  }
+
+  .shadow-inset {
+    box-shadow: 4px 4px 4px 0px #ffffff40 inset;
   }
 }
