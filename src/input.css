@@ -67,7 +67,15 @@
   /* Container */
   --container-content: 1280px;
 
+  /* Blur */
   --blur-glass: 40px;
+
+  /* Background */
+  --background-image-fade-dark: linear-gradient(
+    to left,
+    #000000 20%,
+    rgba(0, 0, 0, 0) 100%
+  );
 }
 
 /* Base */
@@ -103,6 +111,22 @@
 
   .button-primary {
     @apply inline-flex h-11 p-2 gap-1 bg-primary-200 rounded-full font-bold text-sm text-white items-center justify-center cursor-pointer lg:h-12;
+  }
+
+  .logo-brand {
+    @apply grayscale w-31.5 h-8.5 lg:w-[10.188rem] lg:h-12;
+  }
+
+  .fade {
+    @apply pointer-events-none absolute inset-y-0  z-10 w-[2.847rem] bg-fade-dark lg:w-65;
+  }
+
+  .fade-right {
+    @apply right-0;
+  }
+
+  .fade-left {
+    @apply left-0 rotate-180;
   }
 }
 
