@@ -73,7 +73,7 @@
 /* Base */
 @layer base {
   body {
-    @apply bg-black font-primary text-white;
+    @apply bg-black font-primary text-neutral-25;
   }
 }
 
@@ -81,7 +81,7 @@
 @layer components {
   .section-container {
     @apply mx-auto w-full max-w-(--container-content);
-    @apply px-4 py-6;
+    @apply px-4 py-6 lg:px-35;
   }
 
   .logo-image {
@@ -102,7 +102,7 @@
   }
 
   .button-primary {
-    @apply inline-flex h-11 p-2 gap-1 bg-primary-200 rounded-full font-bold text-sm text-white items-center justify-center cursor-pointer;
+    @apply inline-flex h-11 p-2 gap-1 bg-primary-200 rounded-full font-bold text-sm text-white items-center justify-center cursor-pointer lg:h-12;
   }
 }
 
