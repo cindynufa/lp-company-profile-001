@@ -64,9 +64,6 @@
   --radius-4xl: 1.5rem; /* 24px */
   --radius-full: 9999px;
 
-  /* Container */
-  /* --container-content: 1440px; */
-
   /* Blur */
   --blur-glass: 40px;
 
@@ -157,16 +154,34 @@
     @apply font-semibold text-sm lg:text-xl;
   }
 
+  .process {
+    @apply relative flex flex-col w-full gap-4;
+    @apply before:absolute before:top-5 before:bottom-5 before:left-5 before:w-px before:-translate-x-1/2 before:bg-neutral-800;
+    @apply lg:before:left-1/2;
+  }
+
   .process-card {
-    @apply flex flex-row w-full gap-3 items-center;
+    @apply grid grid-cols-[40px_1fr] w-full gap-3 items-center lg:grid-cols-[1fr_40px_1fr];
   }
 
   .process-number {
+    @apply relative grid z-10 col-start-1 row-start-1 place-items-center;
     @apply border-0 bg-primary-200 rounded-full size-10 p-[0.417rem] gap-[0.417rem] text-center font-bold text-xs;
+    @apply lg:col-start-2;
   }
 
   .process-accordion {
-    @apply flex flex-row border border-neutral-900 bg-neutral-950 rounded-2xl w-full p-4 justify-between;
+    @apply flex flex-row col-start-2 row-start-1 justify-between;
+    @apply border border-neutral-900 bg-neutral-950 rounded-2xl w-full p-4;
+    @apply lg:col-start-3;
+  }
+
+  .process-card:nth-child(odd) .process-accordion {
+    @apply lg:col-start-1;
+  }
+
+  .process-heading {
+    @apply grid gap-1;
   }
 
   .service-card {
