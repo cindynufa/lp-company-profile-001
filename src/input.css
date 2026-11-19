@@ -100,6 +100,10 @@
     @apply font-bold text-display-sm lg:text-display-xl;
   }
 
+  .section-subtitle {
+    @apply font-bold text-md;
+  }
+
   .section-description {
     @apply font-medium text-sm text-neutral-400 lg:text-lg;
   }
@@ -165,12 +169,12 @@
     @apply flex flex-row border border-neutral-900 bg-neutral-950 rounded-2xl w-full p-4 justify-between;
   }
 
-  .process-text {
-    @apply font-bold text-md;
+  .service-card {
+    @apply relative flex flex-col border border-neutral-900 bg-neutral-950 rounded-2xl w-full px-5 pt-12 pb-5 gap-5;
   }
 
-  .process-description {
-    @apply font-medium text-sm text-neutral-400;
+  .service-icon {
+    @apply absolute size-16 -top-7;
   }
 }
 
