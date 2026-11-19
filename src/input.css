@@ -88,7 +88,7 @@
 /* Components */
 @layer components {
   .section-container {
-    @apply mx-auto w-full;
+    @apply flex flex-col mx-auto w-full;
     @apply px-4 py-20 gap-6 lg:px-35 lg:py-20 lg:gap-16;
   }
 
@@ -147,6 +147,26 @@
 
   .about-text {
     @apply font-semibold text-sm lg:text-xl;
+  }
+
+  .service-card {
+    @apply flex flex-row w-full gap-3 items-center;
+  }
+
+  .service-accordion {
+    @apply flex flex-row border border-neutral-900 bg-neutral-950 rounded-2xl w-full p-4 justify-between;
+  }
+
+  .service-number {
+    @apply border-0 bg-primary-200 rounded-full size-10 p-[0.417rem] gap-[0.417rem] text-center font-bold text-xs;
+  }
+
+  .service-text {
+    @apply font-bold text-md;
+  }
+
+  .service-description {
+    @apply font-medium text-sm text-neutral-400;
   }
 }
 
