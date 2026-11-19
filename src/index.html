@@ -68,6 +68,7 @@
     <main>
       <!-- Hero Section -->
       <section
+        id="home"
         class="flex flex-col gap-10 lg:flex-row lg:mt-30 lg:items-center lg:justify-center"
       >
         <div
@@ -159,31 +160,35 @@
       </section>
 
       <!-- About Section -->
-      <section>
-        <div>
-          <h3>End-to-End IT Solutions That Drive Results</h3>
-          <p>
+      <section id="about" class="section-container flex flex-col w-full">
+        <div
+          class="flex flex-col w-full gap-[0.688rem] items-center justify-center text-center"
+        >
+          <h3 class="section-title">
+            End-to-End IT Solutions That Drive Results
+          </h3>
+          <p class="section-description">
             From strategy to execution, we deliver solutions that grow your
             business.
           </p>
         </div>
 
-        <div>
-          <div>
-            <h5>50+</h5>
-            <p>Projects Delivered</p>
+        <div class="grid grid-cols-2 w-full gap-4 lg:grid-cols-4">
+          <div class="about-card">
+            <h5 class="about-number">50+</h5>
+            <p class="about-text">Projects Delivered</p>
           </div>
-          <div>
-            <h5>5+</h5>
-            <p>Years of Experience</p>
+          <div class="about-card">
+            <h5 class="about-number">5+</h5>
+            <p class="about-text">Years of Experience</p>
           </div>
-          <div>
-            <h5>10+</h5>
-            <p>Industry Awards Won</p>
+          <div class="about-card">
+            <h5 class="about-number">10+</h5>
+            <p class="about-text">Industry Awards Won</p>
           </div>
-          <div>
-            <h5>100%</h5>
-            <p>Client Satisfaction Rate</p>
+          <div class="about-card">
+            <h5 class="about-number">100%</h5>
+            <p class="about-text">Client Satisfaction Rate</p>
           </div>
         </div>
       </section>

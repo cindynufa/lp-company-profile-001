@@ -65,7 +65,7 @@
   --radius-full: 9999px;
 
   /* Container */
-  --container-content: 1280px;
+  --container-content: 1440px;
 
   /* Blur */
   --blur-glass: 40px;
@@ -88,8 +88,16 @@
 /* Components */
 @layer components {
   .section-container {
-    @apply mx-auto w-full max-w-(--container-content);
-    @apply px-4 py-6 lg:px-35;
+    @apply mx-auto w-full;
+    @apply px-4 py-20 gap-6 lg:px-35 lg:py-20 lg:gap-16;
+  }
+
+  .section-title {
+    @apply font-bold text-display-sm lg:text-display-xl;
+  }
+
+  .section-description {
+    @apply font-medium text-sm text-neutral-400 lg:text-lg;
   }
 
   .logo-image {
@@ -127,6 +135,18 @@
 
   .fade-left {
     @apply left-0 rotate-180;
+  }
+
+  .about-card {
+    @apply flex flex-col border border-neutral-900 bg-neutral-950 rounded-full size-[10.781rem] p-4 gap-1.5 items-center justify-center text-center lg:size-[17.188rem];
+  }
+
+  .about-number {
+    @apply font-bold text-display-lg text-primary-200 lg:text-display-2xl;
+  }
+
+  .about-text {
+    @apply font-semibold text-sm lg:text-xl;
   }
 }
 
