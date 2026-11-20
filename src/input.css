@@ -89,7 +89,7 @@
     @apply px-4 py-20 gap-6 lg:px-35 lg:py-20 lg:gap-16;
   }
 
-  .section-text {
+  .section-header {
     @apply flex flex-col w-full gap-[0.688rem] items-center text-center;
   }
 
@@ -98,7 +98,7 @@
   }
 
   .section-subtitle {
-    @apply font-bold text-md;
+    @apply font-bold text-md lg:text-xl;
   }
 
   .section-description {
@@ -190,6 +190,26 @@
 
   .service-icon {
     @apply absolute size-16 -top-7;
+  }
+
+  .industry-category {
+    @apply flex flex-row gap-1.5 lg:gap-2 items-center;
+  }
+
+  .industry-bar {
+    @apply border-0 bg-neutral-600 p-0.5 w-px h-6 lg:h-8;
+  }
+
+  .industry-category:first-child .industry-bar {
+    @apply bg-primary-200;
+  }
+
+  .industry-menu {
+    @apply font-bold text-md text-neutral-600 lg:text-xl;
+  }
+
+  .industry-category:first-child .industry-menu {
+    @apply text-neutral-25;
   }
 }
 

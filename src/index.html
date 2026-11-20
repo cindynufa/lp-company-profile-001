@@ -165,7 +165,7 @@
 
       <!-- About Section -->
       <section id="about" class="section-container">
-        <div class="section-text">
+        <div class="section-header">
           <h3 class="section-title">
             End-to-End IT Solutions That Drive Results
           </h3>
@@ -197,7 +197,7 @@
 
       <!-- About Section - Process -->
       <section class="section-container">
-        <div class="section-text">
+        <div class="section-header">
           <h3 class="section-title">Our Process</h3>
           <p class="section-description">
             Clear steps. Smart execution. Results you can count on.
@@ -306,7 +306,7 @@
 
       <!-- Service Section - Solutions -->
       <section id="service" class="section-container">
-        <div class="section-text">
+        <div class="section-header">
           <h3 class="section-title">Smart IT Solutions That Grow With You</h3>
           <p class="section-description">
             Tailored tech to boost efficiency, security, and results.
@@ -435,33 +435,35 @@
       </section>
 
       <!-- Service Section - Industry -->
-      <section>
-        <div>
-          <h3>Built for Your Industry</h3>
-          <p>
+      <section class="section-container">
+        <div class="flex flex-col gap-[0.688rem]">
+          <h3 class="section-title">Built for Your Industry</h3>
+          <p class="section-description">
             We've helped companies across industries launch smarter, faster, and
             more securely.
           </p>
         </div>
 
-        <div>
-          <div>
-            <div>
-              <span></span>
-              <a href="">Fintech</a>
+        <div
+          class="flex flex-col w-full gap-6 lg:flex-row lg:gap-16 lg:justify-between"
+        >
+          <div class="flex flex-col gap-3 lg:gap-6">
+            <div class="industry-category">
+              <span class="industry-bar"></span>
+              <a href="" class="industry-menu">Fintech</a>
             </div>
-            <div>
-              <span></span>
-              <a href="">E-Commerce</a>
+            <div class="industry-category">
+              <span class="industry-bar"></span>
+              <a href="" class="industry-menu">E-Commerce</a>
             </div>
-            <div>
-              <span></span>
-              <a href="">Healthcare</a>
+            <div class="industry-category">
+              <span class="industry-bar"></span>
+              <a href="" class="industry-menu">Healthcare</a>
             </div>
           </div>
 
-          <div>
-            <p>
+          <div class="flex flex-col w-full gap-5 lg:w-[60%]">
+            <p class="font-medium text-sm lg:text-lg">
               We build secure, scalable, and compliant fintech solutions — from
               digital wallets to core banking systems — tailored to modern
               financial needs.
@@ -469,6 +471,7 @@
             <img
               src="/assets/images/industry-fintech.png"
               alt="Industry Fintech"
+              class="rounded-xl w-full h-auto"
             />
           </div>
         </div>
