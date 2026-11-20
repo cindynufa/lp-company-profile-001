@@ -223,6 +223,47 @@
   .portfolio-text {
     @apply font-medium text-sm text-primary-200 lg:text-md;
   }
+
+  .testimonial-card {
+    @apply relative flex flex-col border border-neutral-900 bg-neutral-950 rounded-2xl;
+    @apply w-[22.563rem] shrink-0 px-4 pt-4 pb-12 gap-4 lg:w-full lg:shrink lg:px-6 lg:pt-6 lg:pb-12 lg:gap-6;
+  }
+
+  .testimonial-quotes {
+    @apply absolute size-16 -top-9 lg:size-20 lg:-top-11;
+  }
+
+  .testimonial-content {
+    @apply flex flex-col gap-3 items-center text-center;
+  }
+
+  .testimonial-text {
+    @apply font-semibold text-sm lg:text-lg;
+  }
+
+  .testimonial-author {
+    @apply flex flex-col items-center gap-3;
+  }
+
+  .testimonial-author .testimonial-text:last-child {
+    @apply text-primary-200;
+  }
+
+  .testimonial-image {
+    @apply absolute size-15 -bottom-8 self-center lg:size-[4.688rem];
+  }
+
+  .testimonial-pagination {
+    @apply flex flex-row gap-1.5 items-center justify-center;
+  }
+
+  .testimonial-ellipse {
+    @apply border-0 rounded-full bg-neutral-900 size-3;
+  }
+
+  .testimonial-ellipse:first-child {
+    @apply bg-primary-200;
+  }
 }
 
 /* Utilities */
@@ -250,5 +291,23 @@
 
   .shadow-inset {
     box-shadow: 4px 4px 4px 0px #ffffff40 inset;
+  }
+
+  .border-glow {
+    --glow-width: 10rem;
+    --glow-height: 10rem;
+
+    border: 1px solid transparent;
+    background:
+      linear-gradient(var(--color-neutral-950), var(--color-neutral-950))
+        padding-box,
+      radial-gradient(
+          ellipse var(--glow-width) var(--glow-height) at 0 0,
+          var(--color-primary-200),
+          transparent
+        )
+        border-box,
+      linear-gradient(var(--color-neutral-900), var(--color-neutral-900))
+        border-box;
   }
 }
