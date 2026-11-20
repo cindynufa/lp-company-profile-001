@@ -3,11 +3,872 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Company Profile" />
+
     <title>Assignment 3 - Landing Page</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700&family=Quicksand:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link href="./output.css" rel="stylesheet" />
   </head>
   <body>
-    <!-- Mulai coding di sini -->
-    <h1>Henry Rivardo</h1>
+    <!-- Header -->
+    <header
+      class="fixed w-full top-0 z-50 border-b border-transparent before:absolute before:inset-0 before:bg-black/40 before:backdrop-blur-glass"
+    >
+      <div
+        class="relative flex w-full h-16 px-4 py-6 mx-auto z-10 items-center justify-between lg:grid lg:grid-cols-[1fr_auto_1fr] lg:h-full lg:px-35"
+      >
+        <a href="#home" class="flex gap-[0.533rem] items-center">
+          <img src="/assets/images/logo.png" alt="Logo" class="logo-image" />
+          <h2 class="logo-text">Your Logo</h2>
+        </a>
+
+        <div class="relative lg:hidden">
+          <input type="checkbox" id="menu-toggle" class="peer sr-only" />
+          <label for="menu-toggle" class="flex items-center cursor-pointer">
+            <img
+              src="/assets/icons/dark-hamburger-open.png"
+              alt="Open Navigation Menu"
+              class="icon-open block"
+            />
+            <img
+              src="/assets/icons/dark-hamburger-close.png"
+              alt="Close Navigation Menu"
+              class="icon-close hidden"
+            />
+          </label>
+        </div>
+
+        <nav class="nav" aria-label="Navigation Menu">
+          <ul
+            class="flex flex-col w-full gap-3 lg:flex-row lg:w-auto lg:gap-10"
+          >
+            <li><a href="#about" class="nav-text">About</a></li>
+            <li><a href="#service" class="nav-text">Service</a></li>
+            <li><a href="#portfolio" class="nav-text">Portfolio</a></li>
+            <li><a href="#testimonials" class="nav-text">Testimonials</a></li>
+            <li><a href="#faq" class="nav-text">FAQ</a></li>
+          </ul>
+
+          <button
+            class="button-primary shadow-inset lg:w-[12.313rem] lg:justify-self-end"
+          >
+            <a href="#contact">Let's Talk</a>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section
+        id="home"
+        class="flex flex-col gap-10 items-center justify-center lg:relative lg:flex-row lg:mt-30 lg:right-0 lg:justify-between"
+      >
+        <div
+          class="flex flex-col w-full px-4 py-6 gap-10 mt-30 lg:ml-35 lg:z-10 lg:justify-self-start"
+        >
+          <div class="flex flex-col gap-2">
+            <h1 class="font-bold text-display-lg lg:text-display-3xl">
+              Your Tech Partner for<br /><span class="text-primary-200"
+                >Smarter Growth</span
+              >
+            </h1>
+            <p class="font-semibold text-md lg:text-xl">
+              We deliver tailored IT solutions to help you scale with speed and
+              confidence.
+            </p>
+          </div>
+          <button class="button-primary shadow-inset w-full lg:w-50">
+            <a href="#contact">Let's Talk</a>
+          </button>
+        </div>
+
+        <div
+          class="overflow-hidden w-full lg:absolute lg:w-1/2 lg:right-0 lg:mt-30 lg:justify-end-safe"
+        >
+          <img
+            src="/assets/images/dark-hero.png"
+            alt="Hero Image"
+            class="size-[24.438rem] lg:size-[46.688rem] lg:object-contain"
+          />
+        </div>
+      </section>
+
+      <!-- Brands Section -->
+      <section
+        class="items-center justify-center text-center lg:mt-30 lg:pt-50"
+      >
+        <h4 class="font-bold text-md lg:text-display-xs">
+          Trusted by Global Innovators & Leading Brands
+        </h4>
+        <div class="relative overflow-hidden">
+          <span class="fade fade-left" aria-hidden="true"></span>
+          <span class="fade fade-right" aria-hidden="true"></span>
+          <div
+            class="flex flex-row py-10 gap-12 items-center justify-center overflow-hidden"
+          >
+            <img
+              src="/assets/images/brand-adobe.png"
+              alt="Brand Logo Adobe"
+              class="logo-brand"
+            />
+            <img
+              src="/assets/images/brand-upwork.png"
+              alt="Brand Logo Upwork"
+              class="logo-brand"
+            />
+            <img
+              src="/assets/images/brand-zoom.png"
+              alt="Brand Logo Zoom"
+              class="logo-brand"
+            />
+            <img
+              src="/assets/images/brand-postman.png"
+              alt="Brand Logo Postman"
+              class="logo-brand"
+            />
+            <img
+              src="/assets/images/brand-databricks.png"
+              alt="Brand Logo Databricks"
+              class="logo-brand"
+            />
+            <img
+              src="/assets/images/brand-airbnb.png"
+              alt="Brand Logo Airbnb"
+              class="logo-brand"
+            />
+            <img
+              src="/assets/images/brand-dropbox.png"
+              alt="Brand Logo Dropbox"
+              class="logo-brand"
+            />
+            <img
+              src="/assets/images/brand-paypal.png"
+              alt="Brand Logo Paypal"
+              class="logo-brand"
+            />
+            <img
+              src="/assets/images/brand-netflix.png"
+              alt="Brand Logo Netflix"
+              class="logo-brand"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="section-container">
+        <div class="section-header">
+          <h3 class="section-title">
+            End-to-End IT Solutions That Drive Results
+          </h3>
+          <p class="section-description">
+            From strategy to execution, we deliver solutions that grow your
+            business.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 w-full gap-4 md:grid-cols-4 lg:gap-5">
+          <div class="about-card">
+            <h5 class="about-number">50+</h5>
+            <p class="about-text">Projects Delivered</p>
+          </div>
+          <div class="about-card">
+            <h5 class="about-number">5+</h5>
+            <p class="about-text">Years of Experience</p>
+          </div>
+          <div class="about-card">
+            <h5 class="about-number">10+</h5>
+            <p class="about-text">Industry Awards Won</p>
+          </div>
+          <div class="about-card">
+            <h5 class="about-number">100%</h5>
+            <p class="about-text">Client Satisfaction Rate</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section - Process -->
+      <section class="section-container">
+        <div class="section-header">
+          <h3 class="section-title">Our Process</h3>
+          <p class="section-description">
+            Clear steps. Smart execution. Results you can count on.
+          </p>
+        </div>
+
+        <div class="process">
+          <!-- 1 -->
+          <div class="process-card">
+            <div class="process-number">1</div>
+            <div class="process-accordion">
+              <div class="process-heading">
+                <h6 class="section-subtitle">Discovery & Consultation</h6>
+                <p class="section-description">Understand Your Needs & Goals</p>
+              </div>
+              <img
+                src="/assets/icons/dark-chevron-up.png"
+                alt="Chevron Up"
+                class="size-6"
+              />
+            </div>
+          </div>
+          <!-- 2 -->
+          <div class="process-card">
+            <div class="process-number">2</div>
+            <div class="process-accordion">
+              <div class="process-heading">
+                <h6 class="section-subtitle">Planning & Strategy</h6>
+                <p class="section-description">
+                  Build a Clear, Scalable Roadmap
+                </p>
+              </div>
+              <img
+                src="/assets/icons/dark-chevron-up.png"
+                alt="Chevron Up"
+                class="size-6"
+              />
+            </div>
+          </div>
+          <!-- 3 -->
+          <div class="process-card">
+            <div class="process-number">3</div>
+            <div class="process-accordion">
+              <div class="process-heading">
+                <h6 class="section-subtitle">Design & Prototyping</h6>
+                <p class="section-description">Craft UX That Converts</p>
+              </div>
+              <img
+                src="/assets/icons/dark-chevron-up.png"
+                alt="Chevron Up"
+                class="size-6"
+              />
+            </div>
+          </div>
+          <!-- 4 -->
+          <div class="process-card">
+            <div class="process-number">4</div>
+            <div class="process-accordion">
+              <div class="process-heading">
+                <h6 class="section-subtitle">Development & Implementation</h6>
+                <p class="section-description">
+                  Deliver With Speed & Precision
+                </p>
+              </div>
+              <img
+                src="/assets/icons/dark-chevron-up.png"
+                alt="Chevron Up"
+                class="size-6"
+              />
+            </div>
+          </div>
+          <!-- 5 -->
+          <div class="process-card">
+            <div class="process-number">5</div>
+            <div class="process-accordion">
+              <div class="process-heading">
+                <h6 class="section-subtitle">Testing & Optimization</h6>
+                <p class="section-description">Ensure Quality at Every Step</p>
+              </div>
+              <img
+                src="/assets/icons/dark-chevron-up.png"
+                alt="Chevron Up"
+                class="size-6"
+              />
+            </div>
+          </div>
+          <!-- 6 -->
+          <div class="process-card">
+            <div class="process-number">6</div>
+            <div class="process-accordion">
+              <div class="process-heading">
+                <h6 class="section-subtitle">Launch & Growth</h6>
+                <p class="section-description">
+                  Scale, Measure & Improve Continuously
+                </p>
+              </div>
+              <img
+                src="/assets/icons/dark-chevron-up.png"
+                alt="Chevron Up"
+                class="size-6"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Service Section - Solutions -->
+      <section id="service" class="section-container">
+        <div class="section-header">
+          <h3 class="section-title">Smart IT Solutions That Grow With You</h3>
+          <p class="section-description">
+            Tailored tech to boost efficiency, security, and results.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 w-full gap-10 lg:grid-cols-3">
+          <div class="service-card">
+            <img
+              src="/assets/icons/service-web-development.png"
+              alt="Web Development"
+              class="service-icon"
+            />
+            <div class="service-heading">
+              <h6 class="section-subtitle">Web Development</h6>
+              <p class="section-description">
+                Build fast, scalable, and SEO-friendly websites.
+              </p>
+            </div>
+          </div>
+          <div class="service-card border-glow">
+            <img
+              src="/assets/icons/service-mobile-development.png"
+              alt="Mobile App Development"
+              class="service-icon"
+            />
+            <div class="service-heading">
+              <h6 class="section-subtitle">Mobile App Development</h6>
+              <p class="section-description">
+                Native & cross-platform apps tailored to user needs.
+              </p>
+            </div>
+          </div>
+          <div class="service-card">
+            <img
+              src="/assets/icons/service-uiux-design.png"
+              alt="UI UX Design"
+              class="service-icon"
+            />
+            <div class="service-heading">
+              <h6 class="section-subtitle">UI/UX Design</h6>
+              <p class="section-description">
+                Delight users with intuitive and beautiful interfaces
+              </p>
+            </div>
+          </div>
+          <div class="service-card">
+            <img
+              src="/assets/icons/service-cloud-solutions.png"
+              alt="Cloud Solutions"
+              class="service-icon"
+            />
+            <div class="service-heading">
+              <h6 class="section-subtitle">Cloud Solutions</h6>
+              <p class="section-description">
+                Secure and flexible cloud infrastructure for your growth.
+              </p>
+            </div>
+          </div>
+          <div class="service-card">
+            <img
+              src="/assets/icons/service-software-development.png"
+              alt="Software Development"
+              class="service-icon"
+            />
+            <div class="service-heading">
+              <h6 class="section-subtitle">Software Development</h6>
+              <p class="section-description">
+                Custom solutions built around your business logic.
+              </p>
+            </div>
+          </div>
+          <div class="service-card">
+            <img
+              src="/assets/icons/service-it-infrastructure.png"
+              alt="IT Infrastucture"
+              class="service-icon"
+            />
+            <div class="service-heading">
+              <h6 class="section-subtitle">IT Infrastucture</h6>
+              <p class="section-description">
+                Scale your backend with reliable tech foundations.
+              </p>
+            </div>
+          </div>
+          <div class="service-card">
+            <img
+              src="/assets/icons/service-cybersecurity.png"
+              alt="Cybersecurity Services"
+              class="service-icon"
+            />
+            <div class="service-heading">
+              <h6 class="section-subtitle">Cybersecurity Services</h6>
+              <p class="section-description">
+                Stay protected with enterprise-grade security.
+              </p>
+            </div>
+          </div>
+          <div class="service-card">
+            <img
+              src="/assets/icons/service-qa.png"
+              alt="QA Solutions"
+              class="service-icon"
+            />
+            <div class="service-heading">
+              <h6 class="section-subtitle">QA Solutions</h6>
+              <p class="section-description">
+                Ensure performance with rigorous testing frameworks.
+              </p>
+            </div>
+          </div>
+          <div class="service-card">
+            <img
+              src="/assets/icons/service-it-consulting.png"
+              alt="IT Consulting and Support"
+              class="service-icon"
+            />
+            <div class="service-heading">
+              <h6 class="section-subtitle">IT Consulting & Support</h6>
+              <p class="section-description">
+                Make smarter tech decisions with expert guidance.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Service Section - Industry -->
+      <section class="section-container">
+        <div class="flex flex-col gap-[0.688rem]">
+          <h3 class="section-title">Built for Your Industry</h3>
+          <p class="section-description">
+            We've helped companies across industries launch smarter, faster, and
+            more securely.
+          </p>
+        </div>
+
+        <div
+          class="flex flex-col w-full gap-6 lg:flex-row lg:gap-16 lg:justify-between"
+        >
+          <div class="flex flex-col gap-3 lg:gap-6">
+            <div class="industry-category">
+              <span class="industry-bar"></span>
+              <a href="" class="industry-menu">Fintech</a>
+            </div>
+            <div class="industry-category">
+              <span class="industry-bar"></span>
+              <a href="" class="industry-menu">E-Commerce</a>
+            </div>
+            <div class="industry-category">
+              <span class="industry-bar"></span>
+              <a href="" class="industry-menu">Healthcare</a>
+            </div>
+          </div>
+
+          <div class="flex flex-col w-full gap-5 lg:w-[60%]">
+            <p class="font-medium text-sm lg:text-lg">
+              We build secure, scalable, and compliant fintech solutions — from
+              digital wallets to core banking systems — tailored to modern
+              financial needs.
+            </p>
+            <img
+              src="/assets/images/industry-fintech.png"
+              alt="Industry Fintech"
+              class="rounded-xl w-full h-auto"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Portfolio Section -->
+      <section id="portfolio" class="section-container">
+        <div class="section-header">
+          <h3 class="section-title">
+            From Vision to Launch! Projects We're Proud Of
+          </h3>
+          <p class="section-description">
+            Take a closer look at our recent work powering startups,
+            enterprises, and everything in between.
+          </p>
+        </div>
+
+        <div class="flex flex-col w-full gap-5 md:items-center lg:flex-row lg:justify-between">
+          <div class="portfolio-card">
+            <img
+              src="/assets/images/portfolio-1.png"
+              alt="Portfolio"
+              class="portfolio-image"
+            />
+            <div class="flex flex-col">
+              <span class="portfolio-text">Landing Page</span>
+              <h6 class="section-subtitle">Portofolio 1</h6>
+            </div>
+          </div>
+          <div class="portfolio-card">
+            <img
+              src="/assets/images/portfolio-2.png"
+              alt="Portfolio"
+              class="portfolio-image"
+            />
+            <div class="flex flex-col">
+              <span class="portfolio-text">Landing Page</span>
+              <h6 class="section-subtitle">Portofolio 2</h6>
+            </div>
+          </div>
+          <div class="portfolio-card">
+            <img
+              src="/assets/images/portfolio-3.png"
+              alt="Portfolio"
+              class="portfolio-image"
+            />
+            <div>
+              <span class="portfolio-text">Landing Page</span>
+              <h6 class="section-subtitle">Portofolio 3</h6>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials Section -->
+      <section class="flex flex-col mx-auto w-full py-10 gap-12">
+        <div class="section-header">
+          <h3 class="section-title">What Partners Say About Working With Us</h3>
+          <p class="section-description">
+            Trusted voices. Real experiences. Proven results.
+          </p>
+        </div>
+
+        <div class="relative overflow-x-clip">
+          <span class="fade fade-left -inset-y-12" aria-hidden="true"></span>
+          <span class="fade fade-right -inset-y-12" aria-hidden="true"></span>
+
+          <div class="flex flex-row w-full gap-5 items-center justify-center">
+            <div class="testimonial-card">
+              <img
+                src="/assets/icons/testi-quotes.png"
+                alt="Quotes"
+                class="testimonial-quotes"
+              />
+              <div class="testimonial-content">
+                <img src="/assets/icons/testi-rating.png" alt="Rating" />
+                <p class="testimonial-text">
+                  “Working with this team was a game-changer for our project.
+                  They understood our vision and turned it into reality
+                  efficiently and effectively.”
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <p class="testimonial-text">John Lee</p>
+                <span class="testimonial-text"
+                  >Creative Director at Innovate Corp</span
+                >
+              </div>
+              <img
+                src="/assets/images/testi-ellipse-1.png"
+                alt="Testimonials Ellipse"
+                class="testimonial-image"
+              />
+            </div>
+
+            <div class="testimonial-card border-glow">
+              <img
+                src="/assets/icons/testi-quotes.png"
+                alt="Quotes"
+                class="testimonial-quotes"
+              />
+              <div class="testimonial-content">
+                <img src="/assets/icons/testi-rating.png" alt="Rating" />
+                <p class="testimonial-text">
+                  “The team delivered exactly what we needed — on time and with
+                  outstanding quality. Their attention to detail and
+                  communication were top-notch.”
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <p class="testimonial-text">Sarah Tan</p>
+                <span class="testimonial-text"
+                  >Product Manager at Finovate</span
+                >
+              </div>
+              <img
+                src="/assets/images/testi-ellipse-2.png"
+                alt="Testimonials Ellipse"
+                class="testimonial-image"
+              />
+            </div>
+
+            <div class="testimonial-card">
+              <img
+                src="/assets/icons/testi-quotes.png"
+                alt="Quotes"
+                class="testimonial-quotes"
+              />
+              <div class="testimonial-content">
+                <img src="/assets/icons/testi-rating.png" alt="Rating" />
+                <p class="testimonial-text">
+                  “The collaboration was seamless, and the results surpassed our
+                  expectations. Their expertise transformed our ideas into a
+                  successful product.”
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <p class="testimonial-text">Emily Chen</p>
+                <span class="testimonial-text"
+                  >Marketing Head at Tech Solutions</span
+                >
+              </div>
+              <img
+                src="/assets/images/testi-ellipse-3.png"
+                alt="Testimonials Ellipse"
+                class="testimonial-image"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-pagination">
+          <span class="testimonial-ellipse"></span>
+          <span class="testimonial-ellipse"></span>
+          <span class="testimonial-ellipse"></span>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section id="faq" class="section-container">
+        <div
+          class="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between"
+        >
+          <h3 class="section-title lg:max-w-96">Need Help? Start Here.</h3>
+          <p class="section-description lg:max-w-60 lg:text-right">
+            Everything you need to know — all in one place.
+          </p>
+        </div>
+
+        <div class="line"></div>
+
+        <div
+          class="flex flex-col w-full gap-6 lg:flex-row lg:gap-[4.563rem] lg:justify-between"
+        >
+          <div class="flex flex-col w-full gap-7">
+            <div class="faq-accordion">
+              <div class="faq-header">
+                <p class="faq-question">What services do you offer?</p>
+                <img
+                  src="/assets/icons/dark-decrease.png"
+                  alt="Decrease"
+                  class="size-6"
+                />
+              </div>
+              <p class="faq-answer">
+                We provide custom web/app development, cloud solutions, UX/UI
+                design, and more.
+              </p>
+            </div>
+            <div class="line"></div>
+
+            <div class="faq-header">
+              <p class="faq-question">
+                How do I know if this is right for my business?
+              </p>
+              <img
+                src="/assets/icons/dark-increase.png"
+                alt="Increase"
+                class="size-6"
+              />
+            </div>
+            <div class="line"></div>
+
+            <div class="faq-header">
+              <p class="faq-question">How much does a project cost?</p>
+              <img
+                src="/assets/icons/dark-increase.png"
+                alt="Increase"
+                class="size-6"
+              />
+            </div>
+            <div class="line"></div>
+
+            <div class="faq-header">
+              <p class="faq-question">How long does it take?</p>
+              <img
+                src="/assets/icons/dark-increase.png"
+                alt="Increase"
+                class="size-6"
+              />
+            </div>
+            <div class="line"></div>
+
+            <div class="faq-header">
+              <p class="faq-question">
+                Can I start with a small project first?
+              </p>
+              <img
+                src="/assets/icons/dark-increase.png"
+                alt="Increase"
+                class="size-6"
+              />
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col border-0 bg-primary-300 rounded-2xl w-full p-5 gap-4 md:w-1/2 lg:rounded-4xl lg:w-1/3 lg:p-6 lg:gap-6 lg:justify-between"
+          >
+            <div class="flex flex-col gap-1">
+              <h3
+                class="font-bold text-display-sm text-white lg:text-display-lg"
+              >
+                Let's talk it through
+              </h3>
+              <p class="font-semibold text-sm text-white lg:text-lg">
+                book a free consultation with our team.
+              </p>
+            </div>
+            <img
+              src="/assets/images/faq-consultation.png"
+              alt="Consultation"
+              class="w-[20.063rem] h-[10.951rem] rounded-2xl lg:w-full"
+            />
+            <button
+              class="border-0 bg-white rounded-full h-11 p-2 gap-1 font-bold text-sm text-black items-center justify-center cursor-pointer shadow-inset lg:h-12 lg:text-md"
+            >
+              Free Consultation
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="section-container md:w-2/3">
+        <div class="section-header">
+          <h3 class="section-title">Ready to Start? Let's Talk.</h3>
+          <p class="section-description">
+            Tell us what you need, and we'll get back to you soon.
+          </p>
+        </div>
+
+        <form action="" class="flex flex-col w-full gap-10">
+          <label for="" class="contact-label"
+            >Name
+            <input
+              type="text"
+              name=""
+              id=""
+              placeholder="Enter your name"
+              class="contact-input"
+          /></label>
+          <label for="" class="contact-label"
+            >Email
+            <input
+              type="email"
+              name=""
+              id=""
+              placeholder="Enter your email"
+              class="contact-input"
+          /></label>
+          <label for="" class="contact-label"
+            >Message
+            <textarea
+              name=""
+              id=""
+              rows="5"
+              placeholder="Enter your message"
+              class="contact-input"
+            ></textarea>
+          </label>
+          <label for="" class="contact-label"
+            >Services
+            <div
+              class="flex flex-col gap-3.5 md:flex-row md:gap-7 lg:w-full lg:gap-9.25"
+            >
+              <div class="contact-container">
+                <div class="contact-service">
+                  <input type="checkbox" class="checkbox" checked />
+                  <p>Web Development</p>
+                </div>
+                <div class="contact-service">
+                  <input type="checkbox" class="checkbox" />
+                  <p>Mobile App Development</p>
+                </div>
+                <div class="contact-service">
+                  <input type="checkbox" class="checkbox" />
+                  <p>UI/UX Design</p>
+                </div>
+              </div>
+
+              <div class="contact-container">
+                <div class="contact-service">
+                  <input type="checkbox" class="checkbox" />
+                  <p>Cloud Solutions</p>
+                </div>
+                <div class="contact-service">
+                  <input type="checkbox" class="checkbox" />
+                  <p>Software Development</p>
+                </div>
+                <div class="contact-service">
+                  <input type="checkbox" class="checkbox" />
+                  <p>Other</p>
+                </div>
+              </div>
+            </div>
+          </label>
+
+          <button class="button-primary">Send</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="section-container">
+      <div
+        class="border border-neutral-800 bg-neutral-950 rounded-4xl p-5 gap-6 lg:p-10 lg:gap-15"
+      >
+        <div
+          class="flex flex-col w-full gap-6 lg:flex-row-reverse lg:justify-between"
+        >
+          <a
+            href="#home"
+            class="flex flex-row gap-2 items-center lg:items-start"
+          >
+            <img src="/assets/images/logo.png" alt="Logo" class="logo-image" />
+            <h2 class="logo-text">Your Logo</h2>
+          </a>
+
+          <h3 class="font-bold text-display-sm lg:max-w-70 lg:text-display-lg">
+            LET'S DISCUSS YOUR IDEAS
+          </h3>
+        </div>
+        <div class="line my-6"></div>
+
+        <div class="flex flex-col gap-6 lg:flex-row lg:justify-between">
+          <ul class="flex flex-col gap-2 lg:flex-row lg:gap-8">
+            <li><a href="#about" class="footer-nav">About</a></li>
+            <li><a href="#service" class="footer-nav">Service</a></li>
+            <li><a href="#portfolio" class="footer-nav">Project</a></li>
+            <li><a href="#testimonials" class="footer-nav">Testimonials</a></li>
+            <li><a href="#faq" class="footer-nav">FAQ</a></li>
+          </ul>
+
+          <div class="flex flow-row gap-4">
+            <div class="footer-socmed">
+              <img
+                src="/assets/icons/dark-socmed-facebook.png"
+                alt="Facebook"
+              />
+            </div>
+            <div class="footer-socmed">
+              <img
+                src="/assets/icons/dark-socmed-instagram.png"
+                alt="Instagram"
+              />
+            </div>
+            <div class="footer-socmed">
+              <img
+                src="/assets/icons/dark-socmed-linkedin.png"
+                alt="LinkedIn"
+              />
+            </div>
+            <div class="footer-socmed">
+              <img src="/assets/icons/dark-socmed-tiktok.png" alt="Tiktok" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
