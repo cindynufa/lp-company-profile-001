@@ -192,6 +192,10 @@
     @apply absolute size-16 -top-7;
   }
 
+  .service-heading {
+    @apply flex flex-col gap-1;
+  }
+
   .industry-category {
     @apply flex flex-row gap-1.5 lg:gap-2 items-center;
   }
