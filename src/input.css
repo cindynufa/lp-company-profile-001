@@ -211,6 +211,18 @@
   .industry-category:first-child .industry-menu {
     @apply text-neutral-25;
   }
+
+  .portfolio-card {
+    @apply flex flex-col w-[22.563rem] gap-2;
+  }
+
+  .portfolio-image {
+    @apply rounded-2xl size-full;
+  }
+
+  .portfolio-text {
+    @apply font-medium text-sm text-primary-200 lg:text-md;
+  }
 }
 
 /* Utilities */
