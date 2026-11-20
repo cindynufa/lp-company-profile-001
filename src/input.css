@@ -185,7 +185,7 @@
   }
 
   .service-card {
-    @apply relative flex flex-col border border-neutral-900 bg-neutral-950 rounded-2xl w-full px-5 pt-12 pb-5 gap-5;
+    @apply relative flex flex-col border border-neutral-900 bg-neutral-950 rounded-2xl w-full px-5 pt-12 pb-5 gap-5 cursor-pointer;
   }
 
   .service-icon {
