@@ -631,59 +631,103 @@
       </section>
 
       <!-- FAQ Section -->
-      <section>
-        <div>
-          <h3>Need Help? Start Here.</h3>
-          <p>Everything you need to know — all in one place.</p>
+      <section class="section-container">
+        <div class="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+          <h3 class="section-title lg:max-w-96">Need Help? Start Here.</h3>
+          <p class="section-description lg:max-w-60 lg:text-right">
+            Everything you need to know — all in one place.
+          </p>
         </div>
 
-        <div></div>
+        <div class="line"></div>
 
-        <div>
-          <div>
-            <div>
-              <div>
-                <p>What services do you offer?</p>
-                <img src="/assets/icons/dark-decrease.png" alt="Decrease" />
+        <div
+          class="flex flex-col w-full gap-6 lg:flex-row lg:gap-[4.563rem] lg:justify-between"
+        >
+          <div class="flex flex-col w-full gap-7">
+            <div class="faq-accordion">
+              <div class="faq-header">
+                <p class="faq-question">What services do you offer?</p>
+                <img
+                  src="/assets/icons/dark-decrease.png"
+                  alt="Decrease"
+                  class="size-6"
+                />
               </div>
-              <p>
+              <p class="faq-answer">
                 We provide custom web/app development, cloud solutions, UX/UI
                 design, and more.
               </p>
             </div>
-            <div></div>
+            <div class="line"></div>
 
-            <div>
-              <p>How do I know if this is right for my business?</p>
-              <img src="/assets/icons/dark-increase.png" alt="Increase" />
+            <div class="faq-header">
+              <p class="faq-question">
+                How do I know if this is right for my business?
+              </p>
+              <img
+                src="/assets/icons/dark-increase.png"
+                alt="Increase"
+                class="size-6"
+              />
             </div>
-            <div></div>
+            <div class="line"></div>
 
-            <div>
-              <p>How much does a project cost?</p>
-              <img src="/assets/icons/dark-increase.png" alt="Increase" />
+            <div class="faq-header">
+              <p class="faq-question">How much does a project cost?</p>
+              <img
+                src="/assets/icons/dark-increase.png"
+                alt="Increase"
+                class="size-6"
+              />
             </div>
-            <div></div>
+            <div class="line"></div>
 
-            <div>
-              <p>How long does it take?</p>
-              <img src="/assets/icons/dark-increase.png" alt="Increase" />
+            <div class="faq-header">
+              <p class="faq-question">How long does it take?</p>
+              <img
+                src="/assets/icons/dark-increase.png"
+                alt="Increase"
+                class="size-6"
+              />
             </div>
-            <div></div>
+            <div class="line"></div>
 
-            <div>
-              <p>Can I start with a small project first?</p>
-              <img src="/assets/icons/dark-increase.png" alt="Increase" />
+            <div class="faq-header">
+              <p class="faq-question">
+                Can I start with a small project first?
+              </p>
+              <img
+                src="/assets/icons/dark-increase.png"
+                alt="Increase"
+                class="size-6"
+              />
             </div>
           </div>
 
-          <div>
-            <div>
-              <h3>Let's talk it through</h3>
-              <p>book a free consultation with our team.</p>
+          <div
+            class="flex flex-col border-0 bg-primary-300 rounded-2xl w-full p-5 gap-4 lg:rounded-4xl lg:w-1/3 lg:p-6 lg:gap-6 lg:justify-between"
+          >
+            <div class="flex flex-col gap-1">
+              <h3
+                class="font-bold text-display-sm text-white lg:text-display-lg"
+              >
+                Let's talk it through
+              </h3>
+              <p class="font-semibold text-sm text-white lg:text-lg">
+                book a free consultation with our team.
+              </p>
             </div>
-            <img src="/assets/images/faq-consultation.png" alt="Consultation" />
-            <button>Free Consultation</button>
+            <img
+              src="/assets/images/faq-consultation.png"
+              alt="Consultation"
+              class="w-[20.063rem] h-[10.951rem] rounded-2xl lg:w-full"
+            />
+            <button
+              class="border-0 bg-white rounded-full h-11 p-2 gap-1 font-bold text-sm text-black items-center justify-center cursor-pointer shadow-inset lg:h-12 lg:text-md"
+            >
+              Free Consultation
+            </button>
           </div>
         </div>
       </section>

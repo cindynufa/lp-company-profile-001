@@ -123,7 +123,7 @@
   }
 
   .button-primary {
-    @apply inline-flex h-11 p-2 gap-1 bg-primary-200 rounded-full font-bold text-sm text-white items-center justify-center cursor-pointer lg:h-12;
+    @apply inline-flex bg-primary-200 rounded-full h-11 p-2 gap-1  font-bold text-sm text-white items-center justify-center cursor-pointer lg:h-12;
   }
 
   .logo-brand {
@@ -140,6 +140,10 @@
 
   .fade-left {
     @apply left-0 rotate-180;
+  }
+
+  .line {
+    @apply border border-neutral-800 w-full h-0;
   }
 
   .about-card {
@@ -267,6 +271,22 @@
 
   .testimonial-ellipse:first-child {
     @apply bg-primary-200;
+  }
+
+  .faq-accordion {
+    @apply flex flex-col gap-4;
+  }
+
+  .faq-header {
+    @apply flex flex-row justify-between;
+  }
+
+  .faq-question {
+    @apply font-bold text-lg lg:text-display-xs;
+  }
+
+  .faq-answer {
+    @apply font-medium text-sm text-neutral-400 lg:text-xl;
   }
 }
 
