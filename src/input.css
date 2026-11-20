@@ -288,6 +288,30 @@
   .faq-answer {
     @apply font-medium text-sm text-neutral-400 lg:text-xl;
   }
+
+  .contact-label {
+    @apply flex flex-col w-full gap-1.5 font-bold text-sm;
+  }
+
+  .contact-input {
+    @apply border border-neutral-800 rounded-xl px-4 py-2 gap-2 font-medium text-sm text-neutral-500 lg:text-md;
+  }
+
+  .contact-container {
+    @apply flex flex-col gap-3.5;
+  }
+
+  .contact-service {
+    @apply flex flex-row gap-3 items-center font-medium text-sm;
+  }
+
+  .checkbox {
+    @apply appearance-none shrink-0 border border-neutral-800 bg-black rounded-sm size-5 cursor-pointer;
+  }
+
+  .checkbox:checked {
+    @apply border-primary-200 bg-primary-200 bg-center bg-no-repeat;
+  }
 }
 
 /* Utilities */

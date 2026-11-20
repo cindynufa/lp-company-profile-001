@@ -59,7 +59,7 @@
           <button
             class="button-primary shadow-inset lg:w-[12.313rem] lg:justify-self-end"
           >
-            Let's Talk
+            <a href="#contact">Let's Talk</a>
           </button>
         </nav>
       </div>
@@ -86,7 +86,7 @@
             </p>
           </div>
           <button class="button-primary shadow-inset w-full lg:w-50">
-            Let's Talk
+            <a href="#contact">Let's Talk</a>
           </button>
         </div>
 
@@ -631,8 +631,10 @@
       </section>
 
       <!-- FAQ Section -->
-      <section class="section-container">
-        <div class="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+      <section id="faq" class="section-container">
+        <div
+          class="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between"
+        >
           <h3 class="section-title lg:max-w-96">Need Help? Start Here.</h3>
           <p class="section-description lg:max-w-60 lg:text-right">
             Everything you need to know — all in one place.
@@ -733,64 +735,79 @@
       </section>
 
       <!-- Contact Section -->
-      <section>
-        <div>
-          <h3>Ready to Start? Let's Talk.</h3>
-          <p>Tell us what you need, and we'll get back to you soon.</p>
+      <section id="contact" class="section-container lg:w-2/3">
+        <div class="section-header">
+          <h3 class="section-title">Ready to Start? Let's Talk.</h3>
+          <p class="section-description">
+            Tell us what you need, and we'll get back to you soon.
+          </p>
         </div>
 
-        <form action="">
-          <label for=""
+        <form action="" class="flex flex-col w-full gap-10">
+          <label for="" class="contact-label"
             >Name
-            <input type="text" name="" id="" placeholder="Enter your name"
+            <input
+              type="text"
+              name=""
+              id=""
+              placeholder="Enter your name"
+              class="contact-input"
           /></label>
-          <label for=""
+          <label for="" class="contact-label"
             >Email
-            <input type="email" name="" id="" placeholder="Enter your email"
+            <input
+              type="email"
+              name=""
+              id=""
+              placeholder="Enter your email"
+              class="contact-input"
           /></label>
-          <label for=""
+          <label for="" class="contact-label"
             >Message
             <textarea
               name=""
               id=""
               rows="5"
               placeholder="Enter your message"
+              class="contact-input"
             ></textarea>
           </label>
-          <label for=""
+          <label for="" class="contact-label"
             >Services
-            <div>
-              <div>
-                <input type="checkbox" />
-                <p>Web Development</p>
+            <div class="flex flex-col gap-3.5 lg:flex-row lg:w-full lg:gap-9.25">
+              <div class="contact-container">
+                <div class="contact-service">
+                  <input type="checkbox" class="checkbox" checked />
+                  <p>Web Development</p>
+                </div>
+                <div class="contact-service">
+                  <input type="checkbox" class="checkbox" />
+                  <p>Mobile App Development</p>
+                </div>
+                <div class="contact-service">
+                  <input type="checkbox" class="checkbox" />
+                  <p>UI/UX Design</p>
+                </div>
               </div>
-              <div>
-                <input type="checkbox" />
-                <p>Mobile App Development</p>
-              </div>
-              <div>
-                <input type="checkbox" />
-                <p>UI/UX Design</p>
-              </div>
-            </div>
 
-            <div>
-              <div>
-                <input type="checkbox" />
-                <p>Cloud Solutions</p>
-              </div>
-              <div>
-                <input type="checkbox" />
-                <p>Software Development</p>
-              </div>
-              <div>
-                <input type="checkbox" />
-                <p>Other</p>
+              <div class="contact-container">
+                <div class="contact-service">
+                  <input type="checkbox" class="checkbox" />
+                  <p>Cloud Solutions</p>
+                </div>
+                <div class="contact-service">
+                  <input type="checkbox" class="checkbox" />
+                  <p>Software Development</p>
+                </div>
+                <div class="contact-service">
+                  <input type="checkbox" class="checkbox" />
+                  <p>Other</p>
+                </div>
               </div>
             </div>
           </label>
 
-          <button>Send</button>
+          <button class="button-primary">Send</button>
         </form>
       </section>
     </main>
