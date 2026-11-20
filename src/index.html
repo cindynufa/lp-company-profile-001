@@ -774,7 +774,9 @@
           </label>
           <label for="" class="contact-label"
             >Services
-            <div class="flex flex-col gap-3.5 lg:flex-row lg:w-full lg:gap-9.25">
+            <div
+              class="flex flex-col gap-3.5 lg:flex-row lg:w-full lg:gap-9.25"
+            >
               <div class="contact-container">
                 <div class="contact-service">
                   <input type="checkbox" class="checkbox" checked />
@@ -812,30 +814,59 @@
       </section>
     </main>
 
-    <footer>
-      <a href="#home">
-        <img src="/assets/images/logo.png" alt="Logo" />
-        <h1>Your Logo</h1>
-      </a>
+    <footer class="section-container">
+      <div
+        class="border border-neutral-800 bg-neutral-950 rounded-4xl p-5 gap-6 lg:p-10 lg:gap-15"
+      >
+        <div
+          class="flex flex-col w-full gap-6 lg:flex-row-reverse lg:justify-between"
+        >
+          <a
+            href="#home"
+            class="flex flex-row gap-2 items-center lg:items-start"
+          >
+            <img src="/assets/images/logo.png" alt="Logo" class="logo-image" />
+            <h2 class="logo-text">Your Logo</h2>
+          </a>
 
-      <h3>LET'S DISCUSS YOUR IDEAS</h3>
+          <h3 class="font-bold text-display-sm lg:max-w-70 lg:text-display-lg">
+            LET'S DISCUSS YOUR IDEAS
+          </h3>
+        </div>
+        <div class="line my-6"></div>
 
-      <div></div>
+        <div class="flex flex-col gap-6 lg:flex-row lg:justify-between">
+          <ul class="flex flex-col gap-2 lg:flex-row lg:gap-8">
+            <li><a href="#about" class="footer-nav">About</a></li>
+            <li><a href="#service" class="footer-nav">Service</a></li>
+            <li><a href="#portfolio" class="footer-nav">Project</a></li>
+            <li><a href="#testimonials" class="footer-nav">Testimonials</a></li>
+            <li><a href="#faq" class="footer-nav">FAQ</a></li>
+          </ul>
 
-      <div>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#service">Service</a></li>
-          <li><a href="#portfolio">Project</a></li>
-          <li><a href="#testimonials">Testimonials</a></li>
-          <li><a href="#faq">FAQ</a></li>
-        </ul>
-
-        <div>
-          <img src="/assets/icons/dark-socmed-facebook.png" alt="Facebook" />
-          <img src="/assets/icons/dark-socmed-instagram.png" alt="Instagram" />
-          <img src="/assets/icons/dark-socmed-linkedin.png" alt="LinkedIn" />
-          <img src="/assets/icons/dark-socmed-tiktok.png" alt="Tiktok" />
+          <div class="flex flow-row gap-4">
+            <div class="footer-socmed">
+              <img
+                src="/assets/icons/dark-socmed-facebook.png"
+                alt="Facebook"
+              />
+            </div>
+            <div class="footer-socmed">
+              <img
+                src="/assets/icons/dark-socmed-instagram.png"
+                alt="Instagram"
+              />
+            </div>
+            <div class="footer-socmed">
+              <img
+                src="/assets/icons/dark-socmed-linkedin.png"
+                alt="LinkedIn"
+              />
+            </div>
+            <div class="footer-socmed">
+              <img src="/assets/icons/dark-socmed-tiktok.png" alt="Tiktok" />
+            </div>
+          </div>
         </div>
       </div>
     </footer>

@@ -312,6 +312,14 @@
   .checkbox:checked {
     @apply border-primary-200 bg-primary-200 bg-center bg-no-repeat;
   }
+
+  .footer-nav {
+    @apply font-medium text-sm lg:text-md;
+  }
+
+  .footer-socmed {
+    @apply flex border border-neutral-800 rounded-full size-10 items-center justify-center;
+  }
 }
 
 /* Utilities */
