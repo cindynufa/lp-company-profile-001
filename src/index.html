@@ -15,6 +15,8 @@
       rel="stylesheet"
     />
     <link href="./output.css" rel="stylesheet" />
+
+    <script src="./script.js" defer></script>
   </head>
   <body>
     <!-- Header -->
@@ -745,7 +747,7 @@
           </p>
         </div>
 
-        <form id="contact-form" action="" class="flex flex-col w-full gap-10">
+        <form id="contact-form" class="flex flex-col w-full gap-10" novalidate>
           <label for="name" class="contact-label"
             >Name
             <input
@@ -776,44 +778,75 @@
               class="contact-input"
             ></textarea>
           </label>
-          <fieldset for="" class="contact-label">
+          <fieldset class="contact-label">
             <legend class="mb-1.5">Services</legend>
             <div
               class="flex flex-col gap-3.5 md:flex-row md:gap-7 lg:w-full lg:gap-9.25"
             >
               <div class="contact-container">
                 <label class="contact-service">
-                  <input type="checkbox" class="checkbox" checked />
+                  <input
+                    type="checkbox"
+                    name="services"
+                    value="web-development"
+                    class="checkbox"
+                    checked
+                  />
                   Web Development
                 </label>
                 <label class="contact-service">
-                  <input type="checkbox" class="checkbox" />
+                  <input
+                    type="checkbox"
+                    name="services"
+                    value="mobile-app-development"
+                    class="checkbox"
+                  />
                   Mobile App Development
                 </label>
                 <label class="contact-service">
-                  <input type="checkbox" class="checkbox" />
+                  <input
+                    type="checkbox"
+                    name="services"
+                    value="uiux-design"
+                    class="checkbox"
+                  />
                   UI/UX Design
                 </label>
               </div>
 
               <div class="contact-container">
                 <label class="contact-service">
-                  <input type="checkbox" class="checkbox" />
+                  <input
+                    type="checkbox"
+                    name="services"
+                    value="cloud-solutions"
+                    class="checkbox"
+                  />
                   Cloud Solutions
                 </label>
                 <label class="contact-service">
-                  <input type="checkbox" class="checkbox" />
+                  <input
+                    type="checkbox"
+                    name="services"
+                    value="software-development"
+                    class="checkbox"
+                  />
                   Software Development
                 </label>
                 <label class="contact-service">
-                  <input type="checkbox" class="checkbox" />
+                  <input
+                    type="checkbox"
+                    name="services"
+                    value="other"
+                    class="checkbox"
+                  />
                   Other
                 </label>
               </div>
             </div>
           </fieldset>
 
-          <button class="button-primary">Send</button>
+          <button type="submit" class="button-primary">Send</button>
         </form>
       </section>
     </main>
@@ -875,29 +908,53 @@
       </div>
     </footer>
 
-    <dialog id="success-modal" class="success-modal">
-      <div class="success-modal-hero">
+    <dialog id="success-modal" class="modal">
+      <div class="modal-hero">
         <img
           src="/assets/icons/dark-message-successed.png"
           alt="Message Successed"
-          sizes="success-modal-image"
+          class="modal-image"
         />
       </div>
 
-      <div class="success-modal-body">
-        <div class="">
+      <div class="modal-body">
+        <div class="flex flex-col gap-0.5">
           <h3 class="modal-title">Message Received!</h3>
           <p class="modal-description">
             Thanks for reaching out — we'll get back to you as soon as possible.
           </p>
         </div>
 
-        <form method="dialog">
-          <button class="button-primary">Back to Home</button>
+        <form method="dialog" class="w-full">
+          <button class="button-primary shadow-inset w-full">
+            Back to Home
+          </button>
+        </form>
+      </div>
+    </dialog>
+
+    <dialog id="failed-modal" class="modal">
+      <div class="modal-hero">
+        <img
+          src="/assets/icons/dark-message-failed.png"
+          alt="Message Failed"
+          class="modal-image"
+        />
+      </div>
+
+      <div class="modal-body">
+        <div class="flex flex-col gap-0.5">
+          <h3 class="modal-title">Oops! Something went wrong.</h3>
+          <p class="modal-description">
+            We couldn't send your message. Please try again or check your
+            connection.
+          </p>
+        </div>
+
+        <form method="dialog" class="w-full">
+          <button class="button-primary shadow-inset w-full">Try Again</button>
         </form>
       </div>
     </dialog>
   </body>
-
-  <script src="./script.js" defer></script>
 </html>
