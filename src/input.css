@@ -320,6 +320,32 @@
   .footer-socmed {
     @apply flex border border-neutral-800 rounded-full size-10 items-center justify-center;
   }
+
+  .success-modal {
+    @apply border border-neutral-800 bg-black rounded-2xl overflow-hidden;
+    @apply w-full m-auto p-0 justify-center items-center;
+    @apply backdrop:bg-black/70 backdrop:backdrop-blur-sm;
+  }
+
+  .success-modal-hero {
+    @apply bg-neutral-950 flex h-40 p-2 gap-2 rounded-t-2xl justify-center;
+  }
+
+  .success-modal-image {
+    @apply size-35 object-contain;
+  }
+
+  .success-modal-body {
+    @apply flex flex-col w-full px-6 pt-6 pb-10 gap-4 justify-center items-center text-center;
+  }
+
+  .modal-title {
+    @apply font-bold text-lg text-neutral-25;
+  }
+
+  .modal-description {
+    @apply font-medium text-sm text-neutral-400;
+  }
 }
 
 /* Utilities */
@@ -343,6 +369,10 @@
 
   body:has(#menu-toggle:checked) {
     @apply overflow-hidden lg:overflow-auto;
+  }
+
+  body:has(dialog[open]) {
+    @apply overflow-hidden;
   }
 
   .shadow-inset {

@@ -489,7 +489,9 @@
           </p>
         </div>
 
-        <div class="flex flex-col w-full gap-5 md:items-center lg:flex-row lg:justify-between">
+        <div
+          class="flex flex-col w-full gap-5 md:items-center lg:flex-row lg:justify-between"
+        >
           <div class="portfolio-card">
             <img
               src="/assets/images/portfolio-1.png"
@@ -743,71 +745,73 @@
           </p>
         </div>
 
-        <form action="" class="flex flex-col w-full gap-10">
-          <label for="" class="contact-label"
+        <form id="contact-form" action="" class="flex flex-col w-full gap-10">
+          <label for="name" class="contact-label"
             >Name
             <input
               type="text"
-              name=""
-              id=""
+              name="name"
+              id="name"
               placeholder="Enter your name"
               class="contact-input"
+              required
           /></label>
-          <label for="" class="contact-label"
+          <label for="email" class="contact-label"
             >Email
             <input
               type="email"
-              name=""
-              id=""
+              name="email"
+              id="email"
               placeholder="Enter your email"
               class="contact-input"
+              required
           /></label>
-          <label for="" class="contact-label"
+          <label for="message" class="contact-label"
             >Message
             <textarea
-              name=""
-              id=""
+              name="message"
+              id="message"
               rows="5"
               placeholder="Enter your message"
               class="contact-input"
             ></textarea>
           </label>
-          <label for="" class="contact-label"
-            >Services
+          <fieldset for="" class="contact-label">
+            <legend class="mb-1.5">Services</legend>
             <div
               class="flex flex-col gap-3.5 md:flex-row md:gap-7 lg:w-full lg:gap-9.25"
             >
               <div class="contact-container">
-                <div class="contact-service">
+                <label class="contact-service">
                   <input type="checkbox" class="checkbox" checked />
-                  <p>Web Development</p>
-                </div>
-                <div class="contact-service">
+                  Web Development
+                </label>
+                <label class="contact-service">
                   <input type="checkbox" class="checkbox" />
-                  <p>Mobile App Development</p>
-                </div>
-                <div class="contact-service">
+                  Mobile App Development
+                </label>
+                <label class="contact-service">
                   <input type="checkbox" class="checkbox" />
-                  <p>UI/UX Design</p>
-                </div>
+                  UI/UX Design
+                </label>
               </div>
 
               <div class="contact-container">
-                <div class="contact-service">
+                <label class="contact-service">
                   <input type="checkbox" class="checkbox" />
-                  <p>Cloud Solutions</p>
-                </div>
-                <div class="contact-service">
+                  Cloud Solutions
+                </label>
+                <label class="contact-service">
                   <input type="checkbox" class="checkbox" />
-                  <p>Software Development</p>
-                </div>
-                <div class="contact-service">
+                  Software Development
+                </label>
+                <label class="contact-service">
                   <input type="checkbox" class="checkbox" />
-                  <p>Other</p>
-                </div>
+                  Other
+                </label>
               </div>
             </div>
-          </label>
+          </fieldset>
 
           <button class="button-primary">Send</button>
         </form>
@@ -870,5 +874,30 @@
         </div>
       </div>
     </footer>
+
+    <dialog id="success-modal" class="success-modal">
+      <div class="success-modal-hero">
+        <img
+          src="/assets/icons/dark-message-successed.png"
+          alt="Message Successed"
+          sizes="success-modal-image"
+        />
+      </div>
+
+      <div class="success-modal-body">
+        <div class="">
+          <h3 class="modal-title">Message Received!</h3>
+          <p class="modal-description">
+            Thanks for reaching out — we'll get back to you as soon as possible.
+          </p>
+        </div>
+
+        <form method="dialog">
+          <button class="button-primary">Back to Home</button>
+        </form>
+      </div>
+    </dialog>
   </body>
+
+  <script src="./script.js" defer></script>
 </html>
